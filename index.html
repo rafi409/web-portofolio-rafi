@@ -183,47 +183,6 @@ footer {
     }
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* menu utama */
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-/* hamburger */
-.menu-toggle {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #111;
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
 </style>
 </head>
 
@@ -232,18 +191,20 @@ footer {
 <header>
     <nav class="navbar">
         
-        <div class="menu-btn" onclick="toggleMenu()">
+        <div class="menu-toggle" id="menu-toggle">
             ☰
         </div>
 
-        <div id="menu" class="menu">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Education</a>
-            <a href="#">Certification</a>
-            <a href="#">Projects</a>    
-            <a href="#">Contact</a>
-        </div>
+    <!-- MENU -->
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('contact')">Contact</button>
+
+<!-- HALAMAN -->
+<div id="home" class="page">Ini Home</div>
+<div id="about" class="page" style="display:none;">Ini About</div>
+<div id="contact" class="page" style="display:none;">Ini Contact</div>
+
     </nav>
 </header>
 
