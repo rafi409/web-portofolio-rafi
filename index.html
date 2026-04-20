@@ -182,20 +182,68 @@ footer {
         transform: translateY(0);
     }
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* menu utama */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* hamburger */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #111;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h2>Rafi</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Riwayat</a>
-        <a href="#certification">Sertifikasi</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar">
+        
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Riwayat</a>
+            <a href="#certification">Sertifikasi</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 </header>
 
@@ -207,17 +255,16 @@ footer {
     </div>
 
     <div class="hero-img">
-        <img src="WhatsApp Image 2026-04-19 at 07.07.44.jpeg" alt="profile">
+        <img src="WhatsApp Image 2026-04-19 at 07.07.44.jpeg" alt="profile" style="width: 300px; margin: 15px; border-radius: 15px; border: 3px solid #00ffcc;">">
     </div>
 </section>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>Saya adalah individu yang memiliki semangat tinggi dalam dunia teknologi, khususnya di bidang IT Support, Network Engineering, dan Cyber Security. Saya dikenal sebagai pribadi yang mudah bekerja sama dalam tim, mampu beradaptasi dengan lingkungan kerja, serta selalu berusaha memberikan kontribusi terbaik dalam setiap tugas yang dijalankan.
-
-Saya memiliki ketertarikan besar untuk terus belajar dan berkembang seiring dengan perkembangan teknologi. Bagi saya, setiap pengalaman adalah kesempatan untuk meningkatkan kemampuan dan memperluas wawasan, baik dari sisi teknis maupun non-teknis.
-
-Dengan motivasi untuk terus berkembang, saya berkomitmen untuk membangun karier di bidang IT dengan mengedepankan profesionalisme, tanggung jawab, dan keinginan untuk terus mengeksplorasi hal-hal baru, khususnya dalam bidang jaringan dan keamanan sistem.</p>
+    <p>Saya adalah individu yang memiliki semangat tinggi dalam dunia teknologi, khususnya di bidang IT Support, Network Engineering, dan Cyber Security.</p>
+    <p>Saya dikenal sebagai pribadi yang mudah bekerja sama dalam tim, mampu beradaptasi dengan lingkungan kerja, serta selalu berusaha memberikan kontribusi terbaik dalam setiap tugas yang dijalankan.</p>
+<p>Saya memiliki ketertarikan besar untuk terus belajar dan berkembang seiring dengan perkembangan teknologi. Bagi saya, setiap pengalaman adalah kesempatan untuk meningkatkan kemampuan dan memperluas wawasan, baik dari sisi teknis maupun non-teknis.</p>
+<p>Dengan motivasi untuk terus berkembang, saya berkomitmen untuk membangun karier di bidang IT dengan mengedepankan profesionalisme, tanggung jawab, dan keinginan untuk terus mengeksplorasi hal-hal baru, khususnya dalam bidang jaringan dan keamanan sistem.</p>
 </section>
 
 <section id="education">
